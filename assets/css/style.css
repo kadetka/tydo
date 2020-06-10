@@ -288,14 +288,24 @@ p.copyright {
 
 /* @media */
 
-@media ( max-width: 750px) {
+@media ( max-width: 995px) {
+    body{
+        background: #d5d0ca;
+    }
+    #wrapper {
+        text-align: center;
+        background: url(../img/bg_zaglushka.png);
+        width: 100%;
+        height: auto;
+        background-size: cover;
+    }
     #wrapper .heading h1 {
         width: 600px;
         height: 58px;
         font-family: 'Montserrat', sans-serif;
         font-weight: 900;
-        font-size: 15px;
-        line-height: 20px;
+        font-size: 22px;
+        line-height: 25px;
         text-align: center;
         color: rgba(56, 56, 56, 0.6);
     }
@@ -305,5 +315,92 @@ p.copyright {
 
     #wrapper .heading {
         padding-top: 40px;
+    }
+
+    #countdown {
+        background: rgba(69, 69, 69, 0.45);
+        border-radius: 30px;
+        width: 500px;
+        height: 69px;
+        font-size: 24px;
+        color: #fff;
+        line-height: 1.1em;
+        margin: 40px 0 60px;
+    }
+    #countdown .row{
+        display: flex;
+        justify-content: center;
+    }
+
+    .paragraph {
+        display: flex;
+        right: 0;
+        margin-bottom: 50px;
+    }
+
+    .paragraph p {
+        color: #ffffff;
+    }
+    .ellipse img {
+        max-width: 230px;
+        height: 175px;
+    }
+}
+
+@media (max-width: 520px) {
+    body{
+        background: #d5d0ca;
+    }
+    .paragraph p {
+        color: #ffffff;
+    }
+    .social a {
+        font-size: 24px;
+        color: rgba(56, 56, 56, 0.6);
+        padding: 0 5px;
+        transition: all 0.3s;
+        margin-left: 50px;
+    }
+}
+@media (max-width: 410px) {
+    .ellipse img {
+        max-width: 115px;
+        height: 90px;
+    }
+    form{
+        flex-direction: column;
+        align-items: center;
+    }
+    form.signup input{
+        background: rgba(56, 56, 56, 0.6);
+    }
+    form.signup input::-webkit-input-placeholder {
+        color: #ffffff;
+    }
+}
+@media (max-width: 350px) {
+    .ellipse img {
+        display: none;
+    }
+
+    #countdown {
+        width: 400px;
+        font-size: 20px;
+    }
+
+    .date-number{
+        font-size: 18px;
+    }
+
+    .date-text{
+        font-size: 13px;
+    }
+
+    form.signup p{
+        color: #000000;
+    }
+
+    .social a {
+        margin-left: 30px;
     }
 }
