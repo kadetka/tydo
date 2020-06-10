@@ -15,6 +15,9 @@
 <body>
 <div id="wrapper">
     <div class="container">
+        <div class="ellipse">
+            <img src="assets/img/Ellipse.png">
+        </div>
         <div class="row">
             <div class="col-md-12 text-center">
                 <img class="logo"src="tydo.png" alt="logo">
@@ -26,8 +29,7 @@
                     <h1>Скоро здесь будет крутая платформа твоих онлайн-курсов!</h1>
                 </div>
                 <div class="countdown">
-                    <div id="countdown">
-                    </div>
+                    <div id="countdown"></div>
                 </div>
                 <div class="paragraph">
                     <p>С tydo ты сможешь создавать свой курс сам! Создавай просто! Зарабатывай легко!</p>
@@ -53,7 +55,7 @@
         </div>
         <div class="row">
             <div class="col-lg-6 col-lg-offset-3">
-                <p class="copyright">&copy; Tydo</p>
+                <p class="copyright">&copy; Tydo.org</p>
                 <div class="credits">
                 </div>
             </div>
@@ -66,10 +68,10 @@
 <script type="text/javascript">
     $('#countdown').countdown('2020/07/01', function (event) {
         $(this).html(event.strftime('<div class="row">' +
-            '<div class="day col-md-3 text-center"><div>%D</div> <div>дней</div></div>' +
-            '<div class="hours col-md-3 text-center"><div>%H</div> <div>часов</div></div>' +
-            '<div class="minutes col-md-3 text-center"><div>%M</div> <div>минут</div></div>' +
-            '<div class="second col-md-3 text-center"><div>%S</div> <div>секунд</div></div></div>'));
+            '<div class="day col-md-3 text-center"><div class="date-number">%D</div> <div class="date-text">дней</div></div>' +
+            '<div class="hours col-md-3 text-center"><div class="date-number">%H</div> <div class="date-text">часов</div></div>' +
+            '<div class="minutes col-md-3 text-center"><div class="date-number">%M</div> <div class="date-text">минут</div></div>' +
+            '<div class="second col-md-3 text-center"><div class="date-number">%S</div> <div class="date-text">секунд</div></div></div>'));
         console.log(event);
     });
 </script>

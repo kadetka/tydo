@@ -191,6 +191,16 @@ form.signup p {
     color: rgba(56, 56, 56, 0.6);
 }
 
+.ellipse{
+    position: absolute;
+    left: 0;
+
+}
+.ellipse img {
+    max-width: 463px;
+    height: 350px;
+}
+
 /* social */
 
 .social {
@@ -219,13 +229,30 @@ form.signup p {
     background: rgba(69, 69, 69, 0.45);
     border-radius: 30px;
     width: 700px;
-    height: 69px;
+    min-height: 69px;
     font-size: 24px;
     color: #fff;
     line-height: 1.1em;
     margin: 40px 0 60px;
 }
-
+.date-number{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: #ffffff;
+    padding-top: 5px;
+}
+.date-text{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+    padding-top: 5px;
+}
 
 /* paragraph */
 
@@ -257,4 +284,26 @@ p.copyright {
 
 .credits, .credits a {
     color: rgba(56, 56, 56, 0.6);
+}
+
+/* @media */
+
+@media ( max-width: 750px) {
+    #wrapper .heading h1 {
+        width: 600px;
+        height: 58px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-size: 15px;
+        line-height: 20px;
+        text-align: center;
+        color: rgba(56, 56, 56, 0.6);
+    }
+    #wrapper .logo {
+        padding-top: 50px;
+    }
+
+    #wrapper .heading {
+        padding-top: 40px;
+    }
 }
