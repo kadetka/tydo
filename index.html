@@ -4,43 +4,58 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tydo</title>
+    <title>Tydo.org</title>
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/bootstrap-theme.css" rel="stylesheet">
     <link href="assets/css/font-awesome.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 <div id="wrapper">
     <div class="container">
+        <div class="ellipse">
+            <img src="assets/img/Ellipse.png">
+        </div>
         <div class="row">
             <div class="col-md-12 text-center">
-                <img src="tydo.png" alt="logo">
+                <img class="logo"src="tydo.png" alt="logo">
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <h1>Создавайте и продавайте онлайн курсы</h1>
-                <h2 class="subtitle">Сайт на реконструкции...</h2>
-                <div id="countdown"></div>
+                <div class="heading">
+                    <h1>Скоро здесь будет крутая платформа твоих онлайн-курсов!</h1>
+                </div>
+                <div class="countdown">
+                    <div id="countdown"></div>
+                </div>
+                <div class="paragraph">
+                    <p>С tydo ты сможешь создавать свой курс сам! Создавай просто! Зарабатывай легко!</p>
+                </div>
                 <form class="form-inline signup" role="form">
                     <div class="form-group">
                         <input type="email" class="form-control" id="exampleInputEmail1"
                                placeholder="Введите свой емайл">
                     </div>
-                    <button type="submit" class="btn btn-theme">Напомнить!</button>
+                    <div class="form-button">
+                        <button type="submit" class="btn btn-theme"></button>
+                        <p>Напомнить!</p>
+                    </div>
                 </form>
                 <div class="social">
+                    <a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                     <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 </div>
             </div>
 
         </div>
         <div class="row">
             <div class="col-lg-6 col-lg-offset-3">
-                <p class="copyright">&copy; Tydo</p>
+                <p class="copyright">&copy; Tydo.org</p>
                 <div class="credits">
                 </div>
             </div>
@@ -52,7 +67,12 @@
 <script src="assets/js/jquery.countdown.min.js"></script>
 <script type="text/javascript">
     $('#countdown').countdown('2020/07/01', function (event) {
-        $(this).html(event.strftime('%w недель %d дней <br /> %H:%M:%S'));
+        $(this).html(event.strftime('<div class="row">' +
+            '<div class="day col-md-3 text-center"><div class="date-number">%D</div> <div class="date-text">дней</div></div>' +
+            '<div class="hours col-md-3 text-center"><div class="date-number">%H</div> <div class="date-text">часов</div></div>' +
+            '<div class="minutes col-md-3 text-center"><div class="date-number">%M</div> <div class="date-text">минут</div></div>' +
+            '<div class="second col-md-3 text-center"><div class="date-number">%S</div> <div class="date-text">секунд</div></div></div>'));
+        console.log(event);
     });
 </script>
 <script type="text/javascript"><!--
